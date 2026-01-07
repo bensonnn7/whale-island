@@ -1,16 +1,14 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { SceneRoot } from "./components/SceneRoot";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <Canvas camera={{ position: [0, 5, 10] }}>
-      <ambientLight />
-      <mesh>
-        <boxGeometry />
-        <meshStandardMaterial color="orange" />
-      </mesh>
-      <OrbitControls />
-    </Canvas>
+    <div className={styles.app}>
+      <div className={styles.canvasWrapper}>
+        <SceneRoot />
+      </div>
+    </div>
   );
 }
 
